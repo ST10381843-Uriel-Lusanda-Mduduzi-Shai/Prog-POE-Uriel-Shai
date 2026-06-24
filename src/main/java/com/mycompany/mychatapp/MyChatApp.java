@@ -18,9 +18,14 @@ public class MyChatApp {
         String firstName;
         String lastName;
         String Pnumber;
+<<<<<<< HEAD
         String Rnumber;
         int option;
+        int totalNum;
         String SEND;
+=======
+        String option;
+>>>>>>> de665ebc2b1390df3a5bc7d9c327b0cdf17b066a
         String message;
         UserLogin user1 = new UserLogin();
         Messages message1 = new Messages();
@@ -70,6 +75,7 @@ public class MyChatApp {
         
         //Part 2
         
+<<<<<<< HEAD
         System.out.println("Welcome " + firstName + "," + lastName + " " + "it is great to see you again." );
       
         System.out.println("Welcome to QuickChat");
@@ -79,11 +85,21 @@ public class MyChatApp {
             System.out.println("Option 3. Quit : ");
             option = scan.nextInt();
             message1.menuOptions(option);
+=======
+        
+        System.out.println(message1.messageID);
+        
+        message = scan.next();
+        message1.checkMessage(message);
+>>>>>>> de665ebc2b1390df3a5bc7d9c327b0cdf17b066a
 
+            System.out.println("Enter the amount of messages you would like to send");
+            totalNum = scan.nextInt();
+            message1.totalMessages(totalNum);
+            
             System.out.println("Please enter the recipeints cell number");
             Rnumber = scan.nextLine();
             message1.recipientCellNo(Rnumber);
-
 
             System.out.println("Type your message");
             message = scan.nextLine();
@@ -94,6 +110,16 @@ public class MyChatApp {
             System.out.println("Type 'Send', 'Store' or 'Disregard' ");
             SEND = scan.nextLine();
             message1.sentMessage(SEND);
+            
+            //Part 3
+            
+            String[] sentMessages={};
+            String[] disregaredMessages={};
+            String[] storedMessages={};
+            String[] messageHash={};
+            int[] messageID={};
+            
+            
             
         }catch(IOException e){
             System.out.println("Error storing message: " + e.getMessage());

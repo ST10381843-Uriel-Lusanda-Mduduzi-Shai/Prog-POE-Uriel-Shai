@@ -14,7 +14,11 @@ public class Messages {
         
     long messageID = (long) (Math.random()*(max - min + 1) + min);
     
+<<<<<<< HEAD
     //Random 10 digit number generator checker
+=======
+    //random 10 digit number generator checker
+>>>>>>> de665ebc2b1390df3a5bc7d9c327b0cdf17b066a
     public boolean checkNumGen(int messageID){
         if(messageID <= 10){
             return true;
@@ -23,11 +27,15 @@ public class Messages {
         }
     }
     
+<<<<<<< HEAD
     //This method checks for the word limit of the messages
+=======
+>>>>>>> de665ebc2b1390df3a5bc7d9c327b0cdf17b066a
     public String checkMessage(String message){
         if(message.length() <= 250){
             System.out.println("Message is ready to be sent.");
         }else{
+<<<<<<< HEAD
             System.out.println("You have exceeded 250 characters for your message.");
             
         }
@@ -56,6 +64,13 @@ public class Messages {
             System.exit(0);
         }
         return options;
+    }
+    
+    public int totalMessages(int numMess){
+        for(int i = 1; i <= numMess; i++);{
+            System.out.println("Number of messages: " + numMess);
+        }
+        return numMess;
     }
     
     //This method allows the user to choose whether to send, store or disregard the message
@@ -100,5 +115,12 @@ public class Messages {
         this.messageHash = (IDPrefix + ":" + sentMessage + ":" + firstWord + lastWord).toUpperCase();
         return this.message;
     }
+=======
+            System.out.println("You have exeeded 250 characters for your message.");
+            
+        }
+        return message;
+    }
+>>>>>>> de665ebc2b1390df3a5bc7d9c327b0cdf17b066a
     
 }
