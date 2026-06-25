@@ -32,10 +32,10 @@ public class UserLogin {
         String[] specialChar = {"!","@","#","$","%","^","&","*"};
         
         if(Password.length() >= 8 && Password.contains(".*[0-9].*") && Password.contains(".*[A-Z].*")){
-            System.out.println("Password format is correctly");
+            System.out.println("Password format is correct");
             return true;
         }else{
-            System.out.println("Password format is incorrectly");
+            System.out.println("Password format is incorrect");
             return false;
         }
         
