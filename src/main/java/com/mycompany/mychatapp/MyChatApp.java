@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class MyChatApp {
 
-    @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
@@ -112,10 +111,11 @@ public class MyChatApp {
             String[] storedMessages= new String[record];
             String[] messageHash= new String[record];
             int[] messageID= new int[record];
+            int[] messageNo= new int[record];
             
             for(int i = 0; i < record; i++){
                 System.out.println("Enter the amount of messages used");
-                
+                messageNo[i] = scan.nextInt();
                 System.out.println("Enter your sent messages: ");
                 sentMessages[i] = scan.nextLine();
                 System.out.println("Enter your disregarded message: ");
@@ -132,7 +132,8 @@ public class MyChatApp {
                         " | Disregarded Messages: " + disregardedMessages[i] +
                         " | Stored Messages: " + storedMessages[i] +
                         " | Message Hash: " + messageHash[i] +
-                        " | Message ID: " + messageID[i]);
+                        " | Message ID: " + messageID[i] + 
+                        " | Message Number: " + messageNo[i]);
             }
             
             
